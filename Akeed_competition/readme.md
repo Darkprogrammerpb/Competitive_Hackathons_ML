@@ -1,5 +1,5 @@
-# Team Name :- DJANGO_UNCHAINED (7th rank out of 1241 data scientists)
-# LB LINK :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/leaderboard
+### Team Name :- DJANGO_UNCHAINED (7th rank out of 1241 data scientists enrolled)
+### LB LINK :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/leaderboard
 
 ## I.	Datafiles used in the Akeed competition :- <br />
 We used all the files provided in the competition homepage for creation of train and test data sets and treating the problem as a supervised learning (classification) algorithm.

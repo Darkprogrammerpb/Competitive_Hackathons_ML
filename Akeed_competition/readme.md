@@ -13,7 +13,7 @@ We used all the files provided in the competition homepage for creation of train
 Usage of external datasets :- No external dataset was used in the formulation of the problem
 File Folder structure for input data creation and model training
 
-<img src=“https://github.com/Darkprogrammerpb/Competitive_Hackathons_ML/blob/master/Akeed_competition/file_folder_structure.JPG" >
+![alt text](https://github.com/Darkprogrammerpb/Competitive_Hackathons_ML/blob/master/Akeed_competition/file_folder_structure.JPG)
                                                 
 The input datasets mentioned above must be stored in a folder named – ‘raw_input_data’. All the modules described below must be stored in the same location as the folder- ‘raw_input_data’.
 There will be a separate notebook where the model will be trained and output attained.

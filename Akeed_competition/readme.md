@@ -40,7 +40,7 @@ In vendor.py, we perform the following functions :-
 - Primary tags based sparse matrix creation using Count Vectorization
 - Aggregate feature creation using orders served previously to quantify vendor’s capabilities in terms of likeliness, preparation time, maximum orders served, average distance covered etc) 
 The final dataframe created will be vendor_df.
-Dataset path to be changed :- Path of order.csv and vendor.csv <br/>
+Dataset path to be changed :- Path of order.csv and vendor.csv
 **Customer_vendor_order_data.py** :- This module merely captures the interaction between the customer and vendor latitude and longitudes. It takes into account the vendor_df and order_df from previous step and train_customer_information from the first step
 **Create_train_test_data.py** :- This module creates the test and train data based on the customer information and the vendor information captured till now. While the data is being created, we also take into account the customer latitude and longitude value based rotational transformations.
 **Final_preprocessing.py**:- 

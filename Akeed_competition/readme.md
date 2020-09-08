@@ -1,4 +1,4 @@
-# Team Name :- DJANGO_UNCHAINED 
+# Team Name :- DJANGO_UNCHAINED (7th rank out of 1241 data scientists)
 # LB LINK :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/leaderboard
 
 ## I.	Datafiles used in the Akeed competition :- <br />
@@ -17,8 +17,9 @@ File Folder structure for input data creation and model training
 ![alt text](https://github.com/Darkprogrammerpb/Competitive_Hackathons_ML/blob/master/Akeed_competition/file_folder_structure.JPG)                                             
 The input datasets mentioned above must be stored in a folder named – **‘raw_input_data’**. All the modules described below must be stored in the same location as the folder- ‘raw_input_data’.
 There will be a separate notebook where the model will be trained and output attained.
-# II.	Code structure
-## Step 1:- Dataset creation and feature Engineering 
+
+## II.	Code structure
+## Dataset creation and feature Engineering 
 
 **(Base Module) utils.py** :- This module contains all the utility functions to be used throughout the code. The functions include:- 
 1.	Distance based function calculation (like functions for haversine, Manhattan or Bearing distance calculations),
@@ -50,6 +51,7 @@ Dataset path to be changed :- Path of order.csv and vendor.csv
 This module was meant to perform unsupervised learning on both train and test datasets. We form clusters here based on individual customer as vendor locations as well as the data having customer-vendor location pairs.
 We also calculate the PCA based on the latitude and longitude pairs for both customers and vendors to capture the variation. Finally we use online dictionary learning to capture the most variable inducing component in the sparse matrix created in vendor.py on food types.
 
+## Final Model
 ## Final_model.ipynb :-  
 This module eventually creates the train and test data and performs the training on it. The first step in model building process was to do label encoding for the categorical columns developed in the feature engineering process. 
 We used LighGBM model only for the training purpose. Further we used 3 lightgbm models and did voting classification of them. The 3 lightgbms selected were performing really good individually and with voting classifier, we got even better results. Finally a threshold of 0.57 was set to get the best result attainable.

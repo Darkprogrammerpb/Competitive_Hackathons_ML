@@ -27,19 +27,19 @@ There will be a separate notebook where the model will be trained and output att
 4.	Some helping functions of memory reduce, groupby and joins to be used repeatedly in the course of the preparation of train and test data.
 
 **train_customer_information.py**:- This module takes train location and train customer location as input, joins both the dataframe based on the location coordinates and then creates many latitude and longitude based features. To make sure the segment runs, one has to update the train_locations_path and train_customer_path variable.
-We did create a lot of features based on the aggregations done on latitude and longitude and their transforms. This was done after we followed the discussion in the link :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/discussions/1882 . We were using standard mathematical distance measures first. But the aggregations gave a boost to the scores and we realised that if we create more features from the obfuscated /masked coordinates, we were able to generate some reasonable interaction features that can perform reasonably well and can aid the model when we do clustering in the latter part 
+We did create a lot of features based on the aggregations done on latitude and longitude and their transforms. This was done after we followed the discussion in the link :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/discussions/1882 . We were using standard mathematical distance measures first. But the aggregations gave a boost to the scores and we realised that if we create more features from the obfuscated /masked coordinates, we were able to generate some reasonable interaction features that can perform reasonably well and can aid the model when we do clustering in the latter part <br/>
 Dataset path to be changes :- path of train_locations.csv and train_customers.csv
 
-**test_customer_information.py** :- This module does the exact same process as the train_customer_information.py but for the test locations and test customers.
+**test_customer_information.py** :- This module does the exact same process as the train_customer_information.py but for the test locations and test customers. <br/>
 Dataset path to be changes :- path of test_locations.csv and test_customers.csv
 
 **vendor.py** :- This module takes care of the preprocessing of vendor data (to be joined later with both train and test customer information created in the previous steps). The path having orders.csv and vendors.csv needs to be specified in the variable – order_location and vendor_location for the code to run.
 In vendor.py, we perform the following functions :- 
-- Load order and vendor dataset
-- Time based vendor features (like what are the shift timings?, Is nigh service available? What type of food is served based on timings(dinner, lunch etc) ? 
-- Primary tags based sparse matrix creation using Count Vectorization
-- Aggregate feature creation using orders served previously to quantify vendor’s capabilities in terms of likeliness, preparation time, maximum orders served, average distance covered etc) 
-The final dataframe created will be vendor_df.
+1. Load order and vendor dataset
+2. Time based vendor features (like what are the shift timings?, Is nigh service available? What type of food is served based on timings(dinner, lunch etc) ? 
+3. Primary tags based sparse matrix creation using Count Vectorization
+4. Aggregate feature creation using orders served previously to quantify vendor’s capabilities in terms of likeliness, preparation time, maximum orders served, average distance covered etc) 
+The final dataframe created will be vendor_df. <br/>
 Dataset path to be changed :- Path of order.csv and vendor.csv
 **Customer_vendor_order_data.py** :- This module merely captures the interaction between the customer and vendor latitude and longitudes. It takes into account the vendor_df and order_df from previous step and train_customer_information from the first step
 **Create_train_test_data.py** :- This module creates the test and train data based on the customer information and the vendor information captured till now. While the data is being created, we also take into account the customer latitude and longitude value based rotational transformations.

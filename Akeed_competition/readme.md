@@ -11,7 +11,7 @@ We used all the files provided in the competition homepage for creation of train
 6.	Vendors.csv
 7.	SampleSubmission.csv 
 <br /> 
-### Usage of external datasets :- No external dataset was used in the formulation of the problem
+Usage of external datasets :- No external dataset was used in the formulation of the problem
 File Folder structure for input data creation and model training
 
 ![alt text](https://github.com/Darkprogrammerpb/Competitive_Hackathons_ML/blob/master/Akeed_competition/file_folder_structure.JPG)                                             

@@ -1,7 +1,7 @@
 # Team Name :- DJANGO_UNCHAINED 
 # LB LINK :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/leaderboard
 
-# I.	Datafiles used in the Akeed competition :- <br />
+## I.	Datafiles used in the Akeed competition :- <br />
 We used all the files provided in the competition homepage for creation of train and test data sets and treating the problem as a supervised learning (classification) algorithm.
 1.	Test_location.csv 
 2.	Orders.csv
@@ -41,17 +41,20 @@ In vendor.py, we perform the following functions :-
 4. Aggregate feature creation using orders served previously to quantify vendor’s capabilities in terms of likeliness, preparation time, maximum orders served, average distance covered etc) 
 The final dataframe created will be vendor_df. <br/>
 Dataset path to be changed :- Path of order.csv and vendor.csv
+
 **Customer_vendor_order_data.py** :- This module merely captures the interaction between the customer and vendor latitude and longitudes. It takes into account the vendor_df and order_df from previous step and train_customer_information from the first step
+
 **Create_train_test_data.py** :- This module creates the test and train data based on the customer information and the vendor information captured till now. While the data is being created, we also take into account the customer latitude and longitude value based rotational transformations.
+
 **Final_preprocessing.py**:- 
 This module was meant to perform unsupervised learning on both train and test datasets. We form clusters here based on individual customer as vendor locations as well as the data having customer-vendor location pairs.
 We also calculate the PCA based on the latitude and longitude pairs for both customers and vendors to capture the variation. Finally we use online dictionary learning to capture the most variable inducing component in the sparse matrix created in vendor.py on food types.
 
-# Final_model.ipynb :-  
+## Final_model.ipynb :-  
 This module eventually creates the train and test data and performs the training on it. The first step in model building process was to do label encoding for the categorical columns developed in the feature engineering process. 
 We used LighGBM model only for the training purpose. Further we used 3 lightgbm models and did voting classification of them. The 3 lightgbms selected were performing really good individually and with voting classifier, we got even better results. Finally a threshold of 0.57 was set to get the best result attainable.
 
-# Infrastructure used:-
+## Infrastructure used:-
 Since the data preparation step is an infra heavy and a time consuming one, we made sure that we modularise it to make error tracking easy and keep data preparation separate from model training to reduce burden on RAM. We used Google Colab Pro extensively for it(25GB RAM) due to absence of local infrastructure to run and preprocess the datasets
 Bottlenecks (time consuming blocks in the process):- 
 1.	Clustering for customer-vendor combination of latitude and longitudes (approximately 10-15mins)

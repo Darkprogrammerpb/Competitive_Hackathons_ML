@@ -1,2 +1,2 @@
-# Competitive_Hackathons_ML
-Just some repositories from competitive hackathons I give when frustrated
+# Akeed Restaurant Recommendation Challenge
+LB link :- https://zindi.africa/competitions/akeed-restaurant-recommendation-challenge/leaderboard

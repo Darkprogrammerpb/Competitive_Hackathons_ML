@@ -68,4 +68,4 @@ Bottlenecks (time consuming blocks in the process):-
 |     Lightgbm     |     2.2.3           |     Model training                                 |
 |     Sklearn      |     0.22.2.post1    |     unsupervised learning and model   training     |
 
-
+![alt text](https://github.com/Darkprogrammerpb/Competitive_Hackathons_ML/blob/master/Akeed_competition/feat_struct.JPG)                                             
